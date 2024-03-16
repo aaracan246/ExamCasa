@@ -8,12 +8,15 @@ open class UtilidadesBiblioteca{
      *
      * */
     companion object{
+        private val listaIds = mutableSetOf<Int>()
+
         fun generateID(): Int{
-            val listaIds = mutableListOf<Int>()
-            val randomId = (1..120).random()
-//            ConsoleSystem.printer("$randomId")
-            if (!listaIds.contains(randomId)){
-                listaIds.add(randomId)}
+            var randomId: Int
+            do {
+                randomId = (1..120).random()
+            } while (randomId in listaIds)
+            listaIds.add(randomId)
+
             return randomId
         }
     }
