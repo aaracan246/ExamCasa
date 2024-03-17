@@ -4,7 +4,7 @@ interface IGestorPrestamos{
 
 
 }
-open class GestorBiblioteca: UtilidadesBiblioteca(){
+open class GestorBiblioteca(gestor: IGestorPrestamos): UtilidadesBiblioteca(){
     val catalogoLibros = mutableListOf<Libro>()
     //val registroPrestamos = mutableListOf()
 
