@@ -1,10 +1,11 @@
 package org.example
-/***/
+
+
 interface IGestorPrestamos{
 
 
 }
-open class GestorBiblioteca(gestor: IGestorPrestamos): UtilidadesBiblioteca(){
+open class GestorBiblioteca(val gestor: IGestorPrestamos): UtilidadesBiblioteca(){
     val catalogoLibros = mutableListOf<Libro>()
     //val registroPrestamos = mutableListOf()
 
